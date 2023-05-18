@@ -135,6 +135,8 @@ text-transform: uppercase;
 }
 
 
+
+
 @keyframes yellow-circle  {
   0% {
     transform:  translateX(38px) rotate(0deg);

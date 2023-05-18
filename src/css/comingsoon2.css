@@ -4,7 +4,7 @@ body{
   font-family: 'Hind Siliguri', sans-serif;
 }
 
-.main-wrapper{
+.main-wrapper2{
    width: 100%;
    height: 100vh;
    display: flex;
@@ -19,6 +19,7 @@ body{
 .coming_soon_2{
   position: relative;
   z-index: 10;
+  margin-top: 10px;
 }
 
 .main_gif{
@@ -41,7 +42,7 @@ header{
   flex-direction: column;
 }
 
-.email_input{
+.email_input2{
 font-family: 'Hind Siliguri', sans-serif;
 font-style: normal;
 font-weight: 400;
@@ -54,10 +55,41 @@ padding: 10px 15px;
 outline: none;
 max-width: 320px;
 width: 100%;
-margin-right: 15px;
-margin-top: 20px;
+margin: 0 auto;
+/* margin-right: 15px; */
+/* margin-top: 20px; */
 
 }
+
+.heading2{
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 54px;
+  text-transform: uppercase;
+  color: #171B21;
+  }
+  
+  .description2{
+  font-family: 'Hind Siliguri', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 39px;
+  text-transform: uppercase;
+  color: #171B21;
+  margin-top: 30px;
+  }
+  
+  .extraText2{
+  font-family: 'Hind Siliguri', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  }
 
 
 /* Images */
@@ -264,7 +296,6 @@ margin-top: 20px;
 }
 
 
-
 /* Responsive adjustments */
 @media screen and (max-width: 1600px){
   .doctor1{
@@ -389,7 +420,7 @@ margin-top: 20px;
     right: 46px;
     bottom: 110px;
   }
-  .email_input{
+  .email_input2{
     margin-left: 70px;
   }
   .eye {
@@ -518,10 +549,10 @@ margin-top: 20px;
   .colour_div{
     transform: translateX(-70px);
   }
-  .email_input{
+  .email_input2{
     margin-left: 50px;
   }
-  .description{
+  .description2{
     font-size: 14px;
   }
   .eye {
@@ -670,13 +701,13 @@ margin-top: 20px;
   .colour_div{
     transform: translateX(-10px);
   }
-  .email_input{
+  .email_input2{
     margin-left: 35px;
   }
   .email_btn {
     font-size: 16px;
   }
-  .description{
+  .description2{
     font-size: 14px;
   }
   .eye {
@@ -739,7 +770,7 @@ margin-top: 20px;
     width: 250px;
     height: 250px;
   }
-  .heading {
+  .heading2 {
     font-size: 35px;
     margin-top: 20px;
   }
@@ -837,14 +868,14 @@ margin-top: 20px;
   .colour_div{
     transform: translateX(-45px);
   }
-  .email_input{
+  .email_input2{
     margin-left: 73px;
     width: 260px;
   }
   .email_btn {
     font-size: 16px;
   }
-  .description{
+  .description2{
     font-size: 16px;
     flex-direction: column;
     align-items: center;
@@ -914,7 +945,7 @@ margin-top: 20px;
     width: 250px;
     height: 250px;
   }
-  .heading {
+  .heading2 {
     font-size: 30px;
     margin-top: 20px;
   }
@@ -1012,7 +1043,7 @@ margin-top: 20px;
   .colour_div{
     transform: translateX(-10px);
   }
-  .email_input{
+  .email_input2{
     justify-content: center;
     max-width: 215px;
     margin: 0 auto;
@@ -1028,7 +1059,7 @@ margin-top: 20px;
    text-align: center;
    margin:  0 auto;
   }
-  .description{
+  .description2{
     font-size: 16px;
     flex-wrap: wrap;
     justify-content: center;
@@ -1094,11 +1125,11 @@ margin-top: 20px;
     width: 210px;
     height: 210px;
   }
-  .heading {
+  .heading2 {
     font-size: 28px;
     margin-top: 0px;
   }
-  .extraText{
+  .extraText2{
     margin-top: -4px;
     font-size: 14px;
   }
@@ -1108,17 +1139,21 @@ margin-top: 20px;
 }
 
 @media screen and (max-width : 450px){
+  .main-wrapper2{
+    height: 100%;
+    padding-top: 100px;
+ }
   .logo{
     width : 34%;
     height: 100%;
   }
   .doctor1{
-    width: 130px;
-    height: 140px;
+    width: 109px;
+    height: 130px;
   }
   .doctor_div{
     top: 75px;
-    right: -45%;
+    right: -60%;
   }
   .pencil{
     width: 110px;
@@ -1152,17 +1187,17 @@ margin-top: 20px;
   .calender_div{
     transform: translate(-45px, 10px);
   }
-  .technology{
-    width: 130px;
-    height: 70px;
-  }
+  .technology {
+    width: 100px;
+    height: 60px;
+}
   .technology_div{
-    left: -50%;
-    transform: translateY(-340px);
+    left: -60%;
+    transform: translateY(-230px);
   }
   .doller{
-    width: 60px;
-    height: 45px;
+    width: 0px;
+    height: 0px;
   }
   .doller_div{
     bottom: 16%;
@@ -1184,12 +1219,12 @@ margin-top: 20px;
     transform: translate(-10px, 179px);
   }
   .letters {
-    width: 100px;
-    height: 80px;
+    width: 80px;
+    height: 60px;
   }
   .letters_div{
-    right: 38px;
-    bottom: 25px;
+    right: 20px;
+    bottom: 14px;
 
   }
   .colour{
@@ -1199,28 +1234,7 @@ margin-top: 20px;
   .colour_div{
     transform: translateX(-10px);
   }
-  .email_input{
-    justify-content: center;
-    max-width: 215px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    display: flex;
-  }
-  .email_btn {
-    margin-top: 10px;
-    font-size: 18px;
-  }
-  .descriotion_div{
-    max-width: 260px;
-   text-align: center;
-   margin:  0 auto;
-  }
-  .description{
-    font-size: 16px;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
+ 
   .eye {
     width: 85px;
     height: 50px;
@@ -1233,7 +1247,8 @@ margin-top: 20px;
     height: 60px;
   }
   .light_div {
-    left: 32%;
+    left: 0;
+    transform: translateY(80px);
 }
   .pen {
     width: 65px;
@@ -1241,15 +1256,15 @@ margin-top: 20px;
   } 
 
   .pen_div{
-    width: 65px;
-    height: 60px
+    left: 24%;
+    bottom: 0%;
   }
   .brush {
-    width: 55px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
   }
   .brush_div{
-    bottom: 5px;
+    bottom: 2px;
   }
   .idea {
     width: 0px;
@@ -1260,12 +1275,13 @@ margin-top: 20px;
     bottom: 37%;
   }
   .roller {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
   .roller_div{
-    bottom: -102px;
-    transform: translateY(-210px);
+    /* bottom: -106px; */
+    left: 0;
+    transform: translateY(-260px);
   }
   .men {
     width: 0px;
@@ -1276,20 +1292,38 @@ margin-top: 20px;
     transform: translateY(-243px);
 
   }
-  
   .main_gif{
-    width: 190px;
-    height: 190px;
-  }
-  .heading {
-    font-size: 28px;
-    margin-top: 0px;
-  }
-  .extraText{
-    margin-top: -4px;
-    font-size: 14px;
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
   }
   .coming_soon_2{
-    margin-bottom: 25%;
+    margin-top: 15px;
+    margin-bottom: 20%;
+  }
+  .heading2 {
+    font-size: 28px;
+  }
+  .extraText2{
+   
+    font-size: 12px;
+  }
+  
+  .email_input2{
+    margin: 0 auto;
+  }
+  .email_btn {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  .descriotion_div{
+    max-width: 260px;
+   text-align: center;
+   margin:  0 auto;
+  }
+  .description2{
+    font-size: 14px;
+    line-height : 20px;
+    margin-top: 10px;
   }
 }

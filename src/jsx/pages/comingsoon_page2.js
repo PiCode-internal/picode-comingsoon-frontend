@@ -33,7 +33,7 @@ const ComingsoonPage2 = () => {
   console.log("showImage2", showImage2)
 
   return (
-    <div className='main-wrapper'>
+    <div className='main-wrapper2'>
       <header>
         <div className="header">
           <div className='container'>
@@ -165,15 +165,15 @@ const ComingsoonPage2 = () => {
           </div>
           <div className='col-12'>
             <div className='coming_soon_2'>
-              <h1 className='heading'>Coming Soon</h1>
+              <h1 className='heading2'>Coming Soon</h1>
               <div className='descriotion_div'>
-                <h4 className='description'>
+                <h4 className='description2'>
                   Tech and design evolution coming your way!
                 </h4>
               </div>
-              <p className='extraText'>Be the first to know.</p>
+              <p className='extraText2'>Be the first to know.</p>
               <div>
-                <input className='email_input' name="email" placeholder={"Enter you email address"} />
+                <input className='email_input2' name="email" placeholder={"Enter you email address"} />
                 <button className='btn email_btn'>Subscribe</button>
 
               </div>
