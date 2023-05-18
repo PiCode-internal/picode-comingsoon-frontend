@@ -1,6 +1,6 @@
 import React from 'react'
 import "../../css/comingsoon2.css"
-import logo from "../../icons/logo.png"
+import logo from "../../icons/logo.svg"
 import diamond from '../../images/comingsoon2/132338-future-tech-ui.gif'
 import doctor1 from "../../images/comingsoon2/4194.jpg"
 import pencil from "../../images/comingsoon2/5270 3.png"
@@ -30,10 +30,11 @@ const ComingsoonPage2 = () => {
   const showImage = screenWidth > 450;
   const showImage2 = screenWidth > 320;
 
-  console.log("showImage2", showImage2)
+
 
   return (
-    <div className='main-wrapper2'>
+    <div className='main-wrapper2
+    '>
       <header>
         <div className="header">
           <div className='container'>
@@ -48,9 +49,7 @@ const ComingsoonPage2 = () => {
 
       {/* random images */}
 
-      <div className='doctor_div'>
-        <img className='doctor1' src={doctor1} alt="doctor1" />
-      </div>
+
       {
         shouldShowImage ?
           <>
@@ -99,6 +98,10 @@ const ComingsoonPage2 = () => {
           </>
           : null
       }
+
+      <div className='doctor_div'>
+        <img className='doctor1' src={doctor1} alt="doctor1" />
+      </div>
 
       <div className='cycle_div'>
         <img className='cycle' src={cycle} alt="cycle" />
@@ -151,11 +154,6 @@ const ComingsoonPage2 = () => {
         <img className='men' src={men} alt="men" />
       </div>
 
-
-
-
-
-
       <div className='container'>
         <div className='row'>
           <div className='col-12'>
@@ -174,7 +172,7 @@ const ComingsoonPage2 = () => {
               <p className='extraText2'>Be the first to know.</p>
               <div>
                 <input className='email_input2' name="email" placeholder={"Enter you email address"} />
-                <button className='btn email_btn'>Subscribe</button>
+                <button className='btn email_btn2'>Subscribe</button>
 
               </div>
             </div>

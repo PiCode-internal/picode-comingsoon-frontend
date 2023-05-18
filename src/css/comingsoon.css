@@ -29,7 +29,7 @@ header{
 font-family: 'Open Sans', sans-serif;
 font-style: normal;
 font-weight: 700;
-font-size: 54px;
+font-size: 36px;
 text-transform: uppercase;
 color: #171B21;
 }
@@ -38,7 +38,7 @@ color: #171B21;
 font-family: 'Hind Siliguri', sans-serif;
 font-style: normal;
 font-weight: 500;
-font-size: 22px;
+font-size: 20px;
 line-height: 39px;
 text-transform: uppercase;
 color: #171B21;
@@ -50,7 +50,7 @@ font-family: 'Hind Siliguri', sans-serif;
 font-style: normal;
 font-weight: 400;
 font-size: 18px;
-line-height: 32px;
+line-height: 20px;
 text-transform: uppercase;
 margin-bottom: 20px;
 }
@@ -76,11 +76,53 @@ margin-top: 20px;
 .mainLogo{
   display: flex;
   align-items: end;
+}
+
+.logo1{
+  width: 120px;
+  height: auto;
+ }
+
+.email_form{
+  display: flex;
+  align-items: baseline;
+  flex-wrap:wrap
 
 }
 
+.email_div{
+  max-width: 320px;
+  width: 100%;
+}
+
+.subscribed{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.subscribed p{
+  font-family:'Hind Siliguri', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.subscribed p:nth-child(2){
+  font-weight: 400;
+}
+
+.register_btn{
+  font-weight: 500;
+  text-decoration: none;
+  font-family:'Hind Siliguri', sans-serif;
+  margin-left: 20px;
+}
+
 .email_btn{
- font-family:'Hind Siliguri', sans-serif;
+font-family:'Hind Siliguri', sans-serif;
 font-style: normal;
 font-weight: 500;
 font-size: 20px;
@@ -90,6 +132,14 @@ text-transform: uppercase;
 
 .coming_img{
   position: absolute;
+}
+
+.subscriber_msg{
+  font-family:'Hind Siliguri', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 
 .img-wrapper{
@@ -103,33 +153,33 @@ text-transform: uppercase;
 .main_img{
   position: relative;
   z-index: 5;
-  width: 540px;
+  width: 470px;
 }
 
 .sky_blue{
   position: absolute;
-  width: 540px;
+  width: 470px;
   transform: translate(-113px, -19px); 
   animation: sky_blue-circle 15s linear infinite; 
 
 }
 .light_green{
   position: absolute;
-  width: 500px;
+  width: 440px;
   transform: translate(-51px , -11px);
   animation: light_green-circle 15s linear infinite; 
 
 }
 .pinnk{
   position: absolute;
-  width: 520px;
+  width: 450px;
   transform: translate(73px);
   animation: pinnk-circle 15s linear infinite; 
 
 }
 .yelllow{
   position: absolute;
-  height: 520px;
+  height: 450px;
   transform: translateX(38px);
   animation: yellow-circle 15s linear infinite; 
 }
@@ -242,7 +292,7 @@ text-transform: uppercase;
     }
   }
   .heading{
-    font-size: 50px;
+    font-size: 36px;
   }
   .description{
     font-size: 20px;
@@ -278,6 +328,9 @@ text-transform: uppercase;
     .main_img{
     width: 370px;
   
+    }
+    .register_btn{
+      margin-left: 0px;
     }
   
     @keyframes yellow-circle  {
@@ -315,7 +368,7 @@ text-transform: uppercase;
       }
     }
     .heading{
-      font-size: 42zpx;
+      font-size: 36px;
     }
     .description{
       font-size: 16px;
@@ -342,6 +395,15 @@ text-transform: uppercase;
     justify-content: center;
     align-items: center;
     text-align: center;
+  }
+  .email_form{
+    justify-content: center;
+  }
+  .email_div{
+    max-width: 290px;
+  }
+  .subscribed{
+    justify-content: center;
   }
   .order{
     order : 2
@@ -430,7 +492,7 @@ text-transform: uppercase;
       width: 100%;
       margin-right: 12px;
     }
-    .logo {
+    .logo1 {
       max-height: 100%;
       max-width: 100%;
     }
@@ -439,6 +501,9 @@ text-transform: uppercase;
 
 @media screen and (max-width: 575px) {
 
+  .email_div{
+    max-width: 204px
+  }
   .coming_soon{
     justify-content: center;
     align-items: center;
@@ -522,7 +587,7 @@ text-transform: uppercase;
       font-size: 14px;
     }
     .email_btn{
-     font-size: 14px;
+     font-size: 15px;
     }
     .email_input{
       font-size: 14px;
@@ -533,9 +598,9 @@ text-transform: uppercase;
       margin-top: 5px;
       /* margin-right: 12px; */
     }
-    .logo{
-      max-height: 80%;
-      max-width: 80%;
+    .logo1{
+     width: 100px;
+     height: auto;
     }
     
 }
@@ -545,5 +610,8 @@ text-transform: uppercase;
     height: 100%;
     padding-top: 100px;
  }
-  
+  .logo1{
+    width: 100px;
+    height: auto;
+  }
 }

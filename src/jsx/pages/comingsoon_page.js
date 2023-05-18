@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "../../css/comingsoon.css"
-import logo from "../../icons/logo.png"
+import logo from "../../icons/logo.svg"
 import ImgAnimation from '../components/img_animation'
 import { Formik, Form } from 'formik';
 import axios from 'axios';
@@ -8,36 +8,36 @@ import axios from 'axios';
 
 function ComingsoonPage() {
 
+  const [userEmail, setUserEmail] = useState([])
   const [submitted, setSubmitted] = useState(false);
+  const [alreadySubmit, setAlreadySubmit] = useState(false)
 
-  const handleSubscribe = async (values, { resetForm }) => {
+  const handleSubscribe = async (values, { setSubmitting }) => {
     try {
-      let payload = {
-        email: values?.email
+      if (sessionStorage.getItem("email") === values.email) {
+        setAlreadySubmit(true)
+        // setSubmitting(false);
+      } else {
+        let payload = {
+          email: values?.email
+        }
+        const response = await axios.post('https://picode-comingsoon-backend.vercel.app/api/email/send', payload);
+        if (response) {
+          sessionStorage.setItem('email', values?.email);
+          setSubmitted(true)
+          setSubmitting(false);
+        } else {
+          console.log("error", response?.data?.error)
+        }
       }
-      // const response = await axios.post('https://picode-comingsoon-backend.vercel.app/api/email/send', payload);
-      // console.log('Subscription response:', response);
-      // sessionStorage.setItem('email', values?.email);
-      setSubmitted(true)
-
-      resetForm(); // Reset the form values
     } catch (error) {
       console.error('Subscription error:', error);
     }
   };
 
-  if (submitted) {
-    return (
-      <div>
-        <p>Thank you for your Suscrible!</p>
-        <p>
-          <a href="#" >
-            Register another!
-          </a>
-        </p>
-      </div>
-    );
-  }
+
+
+
 
   return (
     <div className='main-wrapper'>
@@ -46,7 +46,7 @@ function ComingsoonPage() {
           <div className='container'>
             <div className='row'>
               <div className='mainLogo'>
-                <img className='logo' src={logo} alt="logo" />
+                <img className='logo1' src={logo} alt="logo" />
               </div>
             </div>
           </div>
@@ -63,8 +63,6 @@ function ComingsoonPage() {
                 <br />
                 <span className='extraText'>Be the first to know.</span>
               </h4>
-
-
               <Formik
                 initialValues={{ email: "" }}
                 validate={values => {
@@ -84,25 +82,54 @@ function ComingsoonPage() {
                   ({ values, handleChange, errors, touched, handleSubmit, isSubmitting }) => {
                     return (
                       <Form>
-                        <div className='email_form'>
-                          <input
-                            className='email_input'
-                            name="email"
-                            placeholder={"Enter you email address"}
-                            value={values?.email}
-                            onChange={handleChange}
-                          />
-                          {/* <p className='text-danger mt-2'> {errors.email && touched.email && errors.email}</p> */}
-                          <button className='btn email_btn' type='submit' disabled={isSubmitting}>Subscribe</button>
-                        </div>
+                        {
+                          submitted ?
+                            <>
+                              <div className='subscribed'>
+                                <p className='text-success thanks_text'>Thanks for subscribing. We will update you!</p>
+                                <p>
+                                  <a href="/" className='register_btn' style={{ color: 'black' }} >
+                                    Register another!
+                                  </a>
+                                </p>
+                              </div>
 
+
+                            </>
+                            : <>
+                              <div className='email_form'>
+                                <div className='email_div' >
+                                  <input
+                                    className='email_input'
+                                    name="email"
+                                    placeholder={"Enter you email address"}
+                                    value={values?.email}
+                                    onChange={handleChange}
+                                  />
+                                  <p className='text-danger mt-2'> {errors.email && touched.email && errors.email}</p>
+                                </div>
+                                <div>
+                                  {
+                                    alreadySubmit ?
+                                      <div className='subscribed'>
+                                        <p>
+                                          <a href="/" className='register_btn mx-3' style={{ color: 'black' }} >
+                                            Register another!
+                                          </a>
+                                        </p>
+                                      </div>
+                                      : <button className='btn email_btn' type='submit' disabled={isSubmitting}>Subscribe</button>
+                                  }
+                                </div>
+                                {alreadySubmit ? <div className='subscriber_msg'> <p className='text-success thanks_text'>Thanks for the interest, you are already in our subscriber list. We will keep you posted first on our updates</p> </div> : ""}
+                              </div>
+                            </>
+                        }
                       </Form>
                     )
                   }
                 }
               </Formik>
-
-
             </div>
           </div>
           <div className='col-12 col-lg-6 col-sm-12'>
@@ -110,7 +137,7 @@ function ComingsoonPage() {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   )
 }
 

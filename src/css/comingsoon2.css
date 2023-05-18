@@ -19,7 +19,7 @@ body{
 .coming_soon_2{
   position: relative;
   z-index: 10;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .main_gif{
@@ -65,7 +65,7 @@ margin: 0 auto;
   font-family: 'Open Sans', sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 54px;
+  font-size: 36px;
   text-transform: uppercase;
   color: #171B21;
   }
@@ -74,22 +74,37 @@ margin: 0 auto;
   font-family: 'Hind Siliguri', sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 39px;
   text-transform: uppercase;
   color: #171B21;
-  margin-top: 30px;
+  margin-top: 15px;
   }
   
   .extraText2{
   font-family: 'Hind Siliguri', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 32px;
   text-transform: uppercase;
   margin-bottom: 20px;
   }
+
+  .email_btn2{
+    font-family:'Hind Siliguri', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    text-transform: uppercase;
+    }
+
+  .logo{
+    width: 120px;
+    height: autp;
+  }
+  
 
 
 /* Images */
@@ -470,6 +485,12 @@ margin: 0 auto;
     width: 180px;
     height: 205px;
   }
+  .extraText2{
+    font-size: 18px;
+  }
+  .descriotion2{
+    font-size: 18px
+  }
  
 }
 
@@ -553,7 +574,10 @@ margin: 0 auto;
     margin-left: 50px;
   }
   .description2{
-    font-size: 14px;
+    font-size: 18px;
+  }
+  .extraText2{
+    font-size: 18px;
   }
   .eye {
     width: 85px;
@@ -704,11 +728,8 @@ margin: 0 auto;
   .email_input2{
     margin-left: 35px;
   }
-  .email_btn {
+  .email_btn2 {
     font-size: 16px;
-  }
-  .description2{
-    font-size: 14px;
   }
   .eye {
     width: 85px;
@@ -774,6 +795,7 @@ margin: 0 auto;
     font-size: 35px;
     margin-top: 20px;
   }
+  
 }
 
 @media screen and (max-width : 767px){
@@ -872,7 +894,7 @@ margin: 0 auto;
     margin-left: 73px;
     width: 260px;
   }
-  .email_btn {
+  .email_btn2 {
     font-size: 16px;
   }
   .description2{
@@ -953,6 +975,9 @@ margin: 0 auto;
 }
 
 @media screen and (max-width : 575px){
+  .diamond_gif{
+    margin-top: 20px;
+  }
   .logo{
     width : 25%;
     height: 100%;
@@ -990,8 +1015,8 @@ margin: 0 auto;
     left: 8%;
   }
   .calender{
-    width: 70px;
-    height: 70px;
+    width: 0px;
+    height: 0px;
   }
   .calender_div{
     transform: translate(-45px, 10px);
@@ -1001,8 +1026,8 @@ margin: 0 auto;
     height: 90px;
   }
   .technology_div{
-    left: -62%;
-    transform: translateY(-300px);
+    left: -70%;
+    transform: translateY(-264px);
   }
   .doller{
     width: 60px;
@@ -1050,7 +1075,7 @@ margin: 0 auto;
     flex-wrap: wrap;
     display: flex;
   }
-  .email_btn {
+  .email_btn2 {
     margin-top: 10px;
     font-size: 18px;
   }
@@ -1117,7 +1142,7 @@ margin: 0 auto;
   }
   .men_div{
     left: 0%;
-    transform: translateY(-243px);
+    transform: translateY(-215px);
 
   }
   
@@ -1305,14 +1330,13 @@ margin: 0 auto;
     font-size: 28px;
   }
   .extraText2{
-   
     font-size: 12px;
   }
   
   .email_input2{
     margin: 0 auto;
   }
-  .email_btn {
+  .email_btn2 {
     margin-top: 10px;
     font-size: 18px;
   }
