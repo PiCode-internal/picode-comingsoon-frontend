@@ -84,7 +84,6 @@ function ComingsoonPage() {
                   ({ values, handleChange, errors, touched, handleSubmit, isSubmitting }) => {
                     return (
                       <Form>
-
                         <div className='email_form'>
                           <input
                             className='email_input'
@@ -93,9 +92,7 @@ function ComingsoonPage() {
                             value={values?.email}
                             onChange={handleChange}
                           />
-                          <p className='text-danger mt-2'> {errors.email && touched.email && errors.email}</p>
-                        </div>
-                        <div>
+                          {/* <p className='text-danger mt-2'> {errors.email && touched.email && errors.email}</p> */}
                           <button className='btn email_btn' type='submit' disabled={isSubmitting}>Subscribe</button>
                         </div>
 
