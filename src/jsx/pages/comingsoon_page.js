@@ -14,28 +14,40 @@ function ComingsoonPage() {
 
   const handleSubscribe = async (values, { setSubmitting }) => {
     try {
-      if (sessionStorage.getItem("email") === values.email) {
-        setAlreadySubmit(true)
-        // setSubmitting(false);
+      let payload = {
+        email: values?.email
+      }
+      const { data } = await axios.post('https://picode-comingsoon-backend.vercel.app/api/email/send', payload);
+      let userEmail = []
+      let storeEmail = localStorage.getItem("email")
+      if (storeEmail === null || storeEmail === undefined || storeEmail.length === 0) {
+        userEmail = [values.email]
+        localStorage.setItem('email', JSON.stringify(userEmail));
+        setSubmitted(true)
+        setSubmitting(false);
+
       } else {
-        let payload = {
-          email: values?.email
-        }
-        const response = await axios.post('https://picode-comingsoon-backend.vercel.app/api/email/send', payload);
-        if (response) {
-          sessionStorage.setItem('email', values?.email);
-          setSubmitted(true)
+        if (storeEmail?.includes(values.email)) {
+          setAlreadySubmit(true)
           setSubmitting(false);
         } else {
-          console.log("error", response?.data?.error)
+          userEmail = JSON.parse(storeEmail);
+          console.log("userEmail", userEmail)// Parse the stored string back to an array
+          userEmail.push(values.email)
+          localStorage.setItem('email', JSON.stringify(userEmail));
+          setSubmitted(true)
+          setSubmitting(false);
+
         }
       }
+
+
     } catch (error) {
       console.error('Subscription error:', error);
     }
   };
 
-
+  console.log("userEmail", userEmail)
 
 
 
@@ -106,7 +118,7 @@ function ComingsoonPage() {
                                     value={values?.email}
                                     onChange={handleChange}
                                   />
-                                  <p className='text-danger mt-2'> {errors.email && touched.email && errors.email}</p>
+                                  {/* <p className='text-danger mt-2'> {errors.email && touched.email && errors.email}</p> */}
                                 </div>
                                 <div>
                                   {

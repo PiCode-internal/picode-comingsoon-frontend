@@ -1,7 +1,7 @@
 import React from 'react'
 import "../../css/comingsoon2.css"
 import logo from "../../icons/logo.svg"
-import diamond from '../../images/comingsoon2/132338-future-tech-ui.gif'
+import diamond from '../../images/comingsoon2/94038-loading-atom.gif'
 import doctor1 from "../../images/comingsoon2/4194.jpg"
 import pencil from "../../images/comingsoon2/5270 3.png"
 import tools from "../../images/comingsoon2/5270 7.png"
@@ -171,7 +171,7 @@ const ComingsoonPage2 = () => {
               </div>
               <p className='extraText2'>Be the first to know.</p>
               <div>
-                <input className='email_input2' name="email" placeholder={"Enter you email address"} />
+                {/* <input className='email_input2' name="email" placeholder={"Enter you email address"} /> */}
                 <button className='btn email_btn2'>Subscribe</button>
 
               </div>
