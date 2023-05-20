@@ -19,12 +19,11 @@ body{
 .coming_soon_2{
   position: relative;
   z-index: 10;
-  margin-top: 20px;
 }
 
 .main_gif{
-  width: 320px;
-  height: 320px;
+  width: auto;
+  height: 400px;
 }
 header{
   position: fixed;
@@ -41,6 +40,29 @@ header{
   align-items:center ;
   flex-direction: column;
 }
+
+.email_form2{
+  display: flex;
+  align-items: baseline;
+  flex-wrap:wrap;
+  justify-content: center;
+
+}
+
+.email_div2{
+  max-width: 320px;
+  width: 100%;
+  justify-content: center;
+}
+.last_msg{
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
 
 .email_input2{
 font-family: 'Hind Siliguri', sans-serif;
@@ -104,6 +126,43 @@ margin: 0 auto;
     width: 120px;
     height: autp;
   }
+  
+
+  .subscribed2{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 15px;
+    justify-content: center;
+  }
+  
+  .subscribed2 p{
+    font-family:'Hind Siliguri', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  
+  .subscribed2 p:nth-child(2){
+    font-weight: 400;
+  }
+  
+  .register_btn2{
+    font-weight: 500;
+    text-decoration: none;
+    font-family:'Hind Siliguri', sans-serif;
+    margin-left: 20px;
+  }
+
+  .subscriber_msg2{
+    font-family:'Hind Siliguri', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  
   
 
 
@@ -325,6 +384,16 @@ margin: 0 auto;
   .pencil_div {
     transform: translateX(-75px);
   }
+  .pen{
+    width: 165px;
+    height: 128px;
+  }
+  .pen-div{
+    position: absolute;
+    bottom: -9px;
+    left: 20%;
+
+  }
 }
 
 @media screen and (max-width: 1460px){
@@ -364,6 +433,9 @@ margin: 0 auto;
 }
 
 @media screen and (max-width : 1399px){
+  .coming_soon_2{
+    margin-bottom: 7%;
+  }
   .doctor_div{
     left: 22%;
   }
@@ -435,9 +507,6 @@ margin: 0 auto;
     right: 46px;
     bottom: 110px;
   }
-  .email_input2{
-    margin-left: 70px;
-  }
   .eye {
     width: 85px;
     height: 60px;
@@ -490,6 +559,9 @@ margin: 0 auto;
   }
   .descriotion2{
     font-size: 18px
+  }
+  .last_msg{
+    margin-top: 10px;
   }
  
 }
@@ -570,9 +642,6 @@ margin: 0 auto;
   .colour_div{
     transform: translateX(-70px);
   }
-  .email_input2{
-    margin-left: 50px;
-  }
   .description2{
     font-size: 18px;
   }
@@ -631,8 +700,13 @@ margin: 0 auto;
     left: 22%;
   }
   .main_gif{
-    width: 330px;
-    height: 330px;
+    width: auto;
+    height: 350px;
+  }
+  .last_msg{
+    max-width: 450px;
+    margin: 0 auto;
+    margin-top: 10px;
   }
 }
 
@@ -646,12 +720,12 @@ margin: 0 auto;
     height: 140px;
   }
   .doctor_div{
-    top:12%;
-    left: 20%;
+    top: 9%;
+    left: 26%;
   }
   .pencil{
-    width: 110px;
-    height: 40px;
+    width: 120px;
+    height: 50px;
   }
   
   .pencil_dev{
@@ -659,8 +733,8 @@ margin: 0 auto;
   }
 
   .tools{
-    width: 150px;
-    height: 65px
+    width: 170px;
+    height: 75px
   }
   .tools_div{
     right: 9%;
@@ -674,8 +748,8 @@ margin: 0 auto;
     right: 35px;
   }
   .calender{
-    width: 70px;
-    height: 70px;
+    width: 90px;
+    height: 90px;
   }
   .calender_div{
     transform: translate(-59px, 43px);
@@ -725,11 +799,9 @@ margin: 0 auto;
   .colour_div{
     transform: translateX(-10px);
   }
-  .email_input2{
-    margin-left: 35px;
-  }
+ 
   .email_btn2 {
-    font-size: 16px;
+    font-size: 18px;
   }
   .eye {
     width: 85px;
@@ -788,8 +860,8 @@ margin: 0 auto;
   }
   
   .main_gif{
-    width: 250px;
-    height: 250px;
+    width: auto;
+    height: 300px;
   }
   .heading2 {
     font-size: 35px;
@@ -837,11 +909,11 @@ margin: 0 auto;
     left: -8%;
   }
   .calender{
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
   }
   .calender_div{
-    transform: translate(-45px, 10px);
+    transform: translate(-55px, 20px);
   }
   .technology{
     width: 170px;
@@ -857,8 +929,7 @@ margin: 0 auto;
   }
   .doller_div{
     bottom: 16%;
-    transform: translate(45px, -5px);
-
+    transform: translate(57px, -81px);
   }
   .multiple {
     width: 180px;
@@ -873,7 +944,7 @@ margin: 0 auto;
     height: 80px;
   }
   .watch_div{
-    transform: translate(-215px, 110px);
+    transform: translate(-240px, 108px);
   }
   .letters {
     width: 110px;
@@ -881,7 +952,7 @@ margin: 0 auto;
   }
   .letters_div{
     right: 35px;
-    bottom: 16px;
+    bottom: 70px;
   }
   .colour{
     width: 110px;
@@ -891,11 +962,12 @@ margin: 0 auto;
     transform: translateX(-45px);
   }
   .email_input2{
-    margin-left: 73px;
-    width: 260px;
+    /* width: 270px; */
+    margin: 0 auto;
   }
+
   .email_btn2 {
-    font-size: 16px;
+    font-size: 18px;
   }
   .description2{
     font-size: 16px;
@@ -943,7 +1015,6 @@ margin: 0 auto;
   .idea_div{
     left: -18px;
     bottom: 20%;
-
   }
   .roller {
     width: 120px;
@@ -963,13 +1034,26 @@ margin: 0 auto;
     transform: translateY(-180px);
   }
   
-  .main_gif{
-    width: 250px;
-    height: 250px;
-  }
   .heading2 {
     font-size: 30px;
     margin-top: 20px;
+  }
+  .main_gif{
+    width: auto;
+    height: 250px;
+  }
+  .email_div2{
+    margin: 0px;
+    max-width: 235px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .descriotion_div{
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .coming_soon_2{
+    margin-top: 0px;
   }
 
 }
@@ -1057,7 +1141,7 @@ margin: 0 auto;
     height: 70px;
   }
   .letters_div{
-   right: 115px;
+    right: 168px;
     bottom: 95px;
 
   }
@@ -1075,8 +1159,12 @@ margin: 0 auto;
     flex-wrap: wrap;
     display: flex;
   }
+  .email_form2{
+    margin: 0 auto;
+    display: unset;
+  }
   .email_btn2 {
-    margin-top: 10px;
+    /* margin-top: 10px; */
     font-size: 18px;
   }
   .descriotion_div{
@@ -1110,8 +1198,8 @@ margin: 0 auto;
   } 
 
   .pen_div{
-    left: 24%;
-    bottom: 5%;
+    left: 22%;
+    bottom: 4%;
   }
   .brush {
     width: 80px;
@@ -1146,10 +1234,10 @@ margin: 0 auto;
 
   }
   
-  .main_gif{
+  /* .main_gif{
     width: 210px;
     height: 210px;
-  }
+  } */
   .heading2 {
     font-size: 28px;
     margin-top: 0px;
@@ -1159,7 +1247,17 @@ margin: 0 auto;
     font-size: 14px;
   }
   .coming_soon_2{
-    margin-bottom: 25%;
+    margin-top: 0px;
+    margin-bottom: 30%;
+  }
+  .email_div2{
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  .last_msg{
+    width: 100%;
+    max-width: 500px;
+    margin-top: 0px;
   }
 }
 
@@ -1168,17 +1266,22 @@ margin: 0 auto;
     height: 100%;
     padding-top: 100px;
  }
+ .dimond_gif{
+  margin-top: 20px;
+ }
   .logo{
-    width : 34%;
-    height: 100%;
+    width: 43%;
+    height: 61%;
+    margin-left: -26px;
+
   }
   .doctor1{
-    width: 109px;
-    height: 130px;
+    width: 115px;
+    height: 135px;
   }
   .doctor_div{
-    top: 75px;
-    right: -60%;
+    top: -5px;
+    right: -156px;
   }
   .pencil{
     width: 110px;
@@ -1197,12 +1300,12 @@ margin: 0 auto;
     right: 9%;
   }
   .cycle{
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
   .cycle_div{
-    top: 0px;
-    left: 32%;
+    top: -1px;
+    left: 17%;
 
   }
   .calender{
@@ -1213,44 +1316,44 @@ margin: 0 auto;
     transform: translate(-45px, 10px);
   }
   .technology {
-    width: 100px;
-    height: 60px;
+    width: 120px;
+    height: 80px;
 }
   .technology_div{
-    left: -60%;
-    transform: translateY(-230px);
+    left: -57%;
+    transform: translateY(-295px);
   }
   .doller{
-    width: 0px;
-    height: 0px;
+    width: 50px;
+    height: 50px;
   }
   .doller_div{
     bottom: 16%;
-    transform: translate(45px, -5px);
+    transform: translate(39px, 24px);
 
   }
   .multiple {
-    width: 0px;
-    height: 0px;
+    width: 120px;
+    height: 80px;
   }
   .multiple_div{
-    transform: translate(36px,-45px);
+    transform: translate(34px,-46px);
   }
   .watch {
-    width: 0px;
-    height: 0px;
-  }
-  .watch_div{
-    transform: translate(-10px, 179px);
-  }
-  .letters {
-    width: 80px;
+    width: 60px;
     height: 60px;
   }
-  .letters_div{
-    right: 20px;
-    bottom: 14px;
+  .watch_div{
+    transform: translate(4px, 149px);
 
+  }
+  .letters {
+    width: 73px;
+    height: 55px;
+  }
+  .letters_div{
+    right: 110px;
+    bottom: 20px;
   }
   .colour{
     width: 150px;
@@ -1268,80 +1371,77 @@ margin: 0 auto;
     transform: translateX(20px);
   }
   .light {
-    width: 40px;
-    height: 60px;
+    width: 50px;
+    height: 70px;
   }
   .light_div {
-    left: 0;
-    transform: translateY(80px);
+    left: 21px;
+    transform: translateY(90px);
 }
   .pen {
-    width: 65px;
-    height: 60px
+    width: 53px;
+    height: 44px;
   } 
 
   .pen_div{
-    left: 24%;
-    bottom: 0%;
+    left: 20%;
+    bottom: 1%;
   }
   .brush {
-    width: 40px;
-    height: 40px;
+    width: 51px;
+    height: 42px;
   }
   .brush_div{
     bottom: 2px;
   }
   .idea {
-    width: 0px;
-    height: 0px;
+    width: 91px;
+    height: 66px;
   }
   .idea_div{
-    left: -25px;
-    bottom: 37%;
+    left: -17px;
+    bottom: 35%;
   }
   .roller {
     width: 80px;
-    height: 80px;
+    height: 75px;
   }
   .roller_div{
     /* bottom: -106px; */
-    left: 0;
-    transform: translateY(-260px);
+    left: 6px;
+    transform: translateY(-151px);
   }
   .men {
-    width: 0px;
-    height: 0px;
+    width: 80px;
+    height: 60px;
   }
   .men_div{
     left: 0%;
-    transform: translateY(-243px);
+    transform: translateY(-200px);
 
   }
   .main_gif{
-    width: 150px;
-    height: 150px;
-    margin-top: 20px;
-  }
-  .coming_soon_2{
-    margin-top: 15px;
-    margin-bottom: 20%;
+    width: auto;
+    height: 230px;
   }
   .heading2 {
-    font-size: 28px;
+    font-size: 25px;
   }
   .extraText2{
     font-size: 12px;
+    margin-bottom: 10px;
   }
   
   .email_input2{
     margin: 0 auto;
+    max-width: 195px;
   }
   .email_btn2 {
     margin-top: 10px;
     font-size: 18px;
   }
   .descriotion_div{
-    max-width: 260px;
+    max-width: 230px;
    text-align: center;
    margin:  0 auto;
   }
@@ -1349,5 +1449,17 @@ margin: 0 auto;
     font-size: 14px;
     line-height : 20px;
     margin-top: 10px;
+    font-weight: 500;
+  }
+  .email_form2{
+    max-width: 350px;
+  }
+  .last_msg{
+    width: 100%;
+    max-width: 500px;
+    margin-top: 0px;
+  }
+  .subscribed2{
+    margin-top: 0;
   }
 }
