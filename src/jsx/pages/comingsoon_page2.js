@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "../../css/comingsoon2.css"
 import logo from "../../icons/logo.svg"
-import diamond from '../../images/comingsoon2/animation_500_lhugtvgi.gif'
+import diamond from '../../images/comingsoon2/ezgif.com-crop.gif'
 import doctor1 from "../../images/comingsoon2/4194.jpg"
 import pencil from "../../images/comingsoon2/5270 3.png"
 import tools from "../../images/comingsoon2/5270 7.png"
@@ -195,91 +195,93 @@ const ComingsoonPage2 = () => {
         <img className='men' src={men} alt="men" />
       </div>
 
-      <div className='container'>
-        <div className='row'>
-          <div className='col-12'>
-            <div className='diamond_gif'>
-              <img className='main_gif' src={diamond} alt="diamond_gif" />
-            </div>
-          </div>
-          <div className='col-12'>
-            <div className='coming_soon_2'>
-              <h1 className='heading2'>Coming Soon</h1>
-              <div className='descriotion_div'>
-                <h4 className='description2'>
-                  Tech and design evolution coming your way!
-                </h4>
+      <div className='main_div'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-12'>
+              <div className='diamond_gif'>
+                <img className='main_gif' src={diamond} alt="diamond_gif" />
               </div>
-              <p className='extraText2'>Be the first to know.</p>
-              <Formik
-                initialValues={{ email: "" }}
-                validate={values => {
-                  const errors = {};
-                  if (!values.email) {
-                    errors.email = 'Please enter the email address !';
-                  } else if (
-                    !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-                  ) {
-                    errors.email = 'Invalid email address';
-                  }
-                  return errors;
-                }}
-                onSubmit={handleSubscribeTwo}
-              >
-                {({ values, handleChange, errors, touched, handleSubmit, isSubmitting }) => {
-                  return (
-                    <Form>
-                      {
-                        submitted ?
-                          <>
-                            <div className='subscribed2'>
-                              <p className='text-success thanks_text2'>Thanks for subscribing. We will update you!</p>
-                              <p>
-                                <a href="/" className='register_btn2' style={{ color: 'black' }} >
-                                  Register another!
-                                </a>
-                              </p>
-                            </div>
-
-
-                          </> : <>
-                            <div className='email_form2'>
-                              <div className='email_div2' >
-                                <input
-                                  className='email_input2'
-                                  name="email"
-                                  placeholder={"Enter you email address"}
-                                  value={values?.email}
-                                  onChange={handleChange}
-                                />
-                                {/* <p className='text-danger mt-2'> {errors.email && touched.email && errors.email}</p> */}
-                              </div>
-                              <div>
-                                {
-                                  alreadySubmit ?
-                                    <div className='subscribed2'>
-                                      <p>
-                                        <a href="/" className='register_btn2 mx-3' style={{ color: 'black' }} >
-                                          Register another!
-                                        </a>
-                                      </p>
-                                    </div>
-                                    : <button className='btn email_btn2' type='submit' disabled={isSubmitting}>Subscribe</button>
-                                }
+            </div>
+            <div className='col-12'>
+              <div className='coming_soon_2'>
+                <h1 className='heading2'>Coming Soon</h1>
+                <div className='descriotion_div'>
+                  <h4 className='description2'>
+                    Tech and design evolution coming your way!
+                  </h4>
+                </div>
+                <p className='extraText2'>Be the first to know.</p>
+                <Formik
+                  initialValues={{ email: "" }}
+                  validate={values => {
+                    const errors = {};
+                    if (!values.email) {
+                      errors.email = 'Please enter the email address !';
+                    } else if (
+                      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+                    ) {
+                      errors.email = 'Invalid email address';
+                    }
+                    return errors;
+                  }}
+                  onSubmit={handleSubscribeTwo}
+                >
+                  {({ values, handleChange, errors, touched, handleSubmit, isSubmitting }) => {
+                    return (
+                      <Form>
+                        {
+                          submitted ?
+                            <>
+                              <div className='subscribed2'>
+                                <p className='text-success thanks_text2'>Thanks for subscribing. We will update you!</p>
+                                <p>
+                                  <a href="/" className='register_btn2' style={{ color: 'black' }} >
+                                    Register another!
+                                  </a>
+                                </p>
                               </div>
 
-                            </div>
-                            <div className='last_msg'>
-                              {alreadySubmit ? <div className='subscriber_msg2'> <p className='text-success thanks_text2'>Thanks for the interest, you are already in our subscriber list. We will keep you posted first on our updates</p> </div> : ""}
-                            </div>
 
-                          </>
-                      }
-                    </Form>
-                  )
-                }}
-              </Formik>
+                            </> : <>
+                              <div className='email_form2'>
+                                <div className='email_div2' >
+                                  <input
+                                    className='email_input2'
+                                    name="email"
+                                    placeholder={"Enter you email address"}
+                                    value={values?.email}
+                                    onChange={handleChange}
+                                  />
+                                  {/* <p className='text-danger mt-2'> {errors.email && touched.email && errors.email}</p> */}
+                                </div>
+                                <div>
+                                  {
+                                    alreadySubmit ?
+                                      <div className='subscribed2'>
+                                        <p>
+                                          <a href="/" className='register_btn2 mx-3' style={{ color: 'black' }} >
+                                            Register another!
+                                          </a>
+                                        </p>
+                                      </div>
+                                      : <button className='btn email_btn2' type='submit' disabled={isSubmitting}>Subscribe</button>
+                                  }
+                                </div>
 
+                              </div>
+                              <div className='last_msg'>
+                                {alreadySubmit ? <div className='subscriber_msg2'> <p className='text-success thanks_text2'>Thanks for the interest, you are already in our subscriber list. We will keep you posted first on our updates</p> </div> : ""}
+                              </div>
+
+                            </>
+                        }
+                      </Form>
+                    )
+                  }}
+                </Formik>
+
+              </div>
             </div>
           </div>
         </div>
