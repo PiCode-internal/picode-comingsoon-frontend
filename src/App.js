@@ -5,23 +5,21 @@ import ComingsoonPage from "./jsx/pages/comingsoon_page";
 
 function App() {
 
-  let email = sessionStorage.getItem("email")
-  console.log("email", email)
+  let email = localStorage.getItem("email")
 
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          {/* <Route path="/" Component={() => {
+          <Route path="/" Component={() => {
             if (email) {
               return <ComingsoonPage2 />
             } else {
               return <ComingsoonPage />
             }
-          }} exact /> */}
-          <Route path="/" Component={ComingsoonPage} exact />
-
-          <Route path="/commingsoon2" Component={ComingsoonPage2} exact />
+          }} exact />
+          {/* <Route path="/" Component={ComingsoonPage} exact /> */}
+          {/* <Route path="/commingsoon2" Component={ComingsoonPage2} exact /> */}
           {/* <Redirect to="/" /> */}
         </Routes>
       </BrowserRouter>
