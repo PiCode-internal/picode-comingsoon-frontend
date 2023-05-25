@@ -20,7 +20,7 @@ function App() {
           }} exact /> */}
           <Route path="/" Component={ComingsoonPage} exact />
           {/* <Route path="/commingsoon2" Component={ComingsoonPage2} exact /> */}
-          <Redirect to="/" />
+
         </Routes>
       </BrowserRouter>
     </div>
