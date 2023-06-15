@@ -1,17 +1,16 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './App.css';
-import ComingsoonPage2 from "./jsx/pages/comingsoon_page2";
 import ComingsoonPage from "./jsx/pages/comingsoon_page";
+import Unsubscribe from "./jsx/pages/unsubscribe";
 
 function App() {
-
-  let email = localStorage.getItem("email")
 
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
           <Route path="/" Component={ComingsoonPage} exact />
+          <Route path="/email/unsubscribe" Component={Unsubscribe} />
         </Routes>
       </BrowserRouter>
     </div>

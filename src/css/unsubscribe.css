@@ -1,0 +1,26 @@
+.main_unsubscribe_div{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin-top: 50px;
+}
+
+.unsubscribe_div{
+  margin: 5% auto;
+}
+
+.unsubscribe_title{
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: #171B21;
+  margin-bottom: 20px
+}
+
+.unsubscribe_text{
+  font-family: 'Hind Siliguri', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;  
+  
+}

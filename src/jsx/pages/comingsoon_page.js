@@ -4,39 +4,37 @@ import logo from "../../icons/logo.svg"
 import ImgAnimation from '../components/img_animation'
 import { Formik, Form } from 'formik';
 import axios from 'axios';
+import { LoadingButton } from '@mui/lab';
 
 
 function ComingsoonPage() {
 
-  const [userEmail, setUserEmail] = useState([])
   const [submitted, setSubmitted] = useState(false);
   const [alreadySubmit, setAlreadySubmit] = useState(false)
+  const [loading, setLoading] = useState(false)
 
-  const handleSubscribe = async (values, { setSubmitting }) => {
+  const handleSubscribe = async (values) => {
     try {
+      setLoading(true)
+
       let payload = {
         email: values?.email
       }
-      const { data } = await axios.post('https://picode-comingsoon-backend.vercel.app/api/email/send', payload);
+      const response = await axios.post('https://picode-comingsoon-backend.vercel.app/api/email/send', payload);
       let userEmail = []
       let storeEmail = localStorage.getItem("email")
       if (storeEmail === null || storeEmail === undefined || storeEmail.length === 0) {
         userEmail = [values.email]
         localStorage.setItem('email', JSON.stringify(userEmail));
-        setSubmitted(true)
-        setSubmitting(false);
 
       } else {
         if (storeEmail?.includes(values.email)) {
           setAlreadySubmit(true)
-          setSubmitting(false);
         } else {
           userEmail = JSON.parse(storeEmail);
-          console.log("userEmail", userEmail)// Parse the stored string back to an array
           userEmail.push(values.email)
           localStorage.setItem('email', JSON.stringify(userEmail));
           setSubmitted(true)
-          setSubmitting(false);
 
         }
       }
@@ -44,6 +42,8 @@ function ComingsoonPage() {
 
     } catch (error) {
       console.error('Subscription error:', error);
+    } finally {
+      setLoading(false)
     }
   };
 
@@ -129,7 +129,7 @@ function ComingsoonPage() {
                                           </a>
                                         </p>
                                       </div>
-                                      : <button className='btn email_btn' type='submit' disabled={isSubmitting}>Subscribe</button>
+                                      : <LoadingButton loading={loading} type="submit" onclick={handleSubmit} className='btn email_btn' disabled={loading}>{"Subsccribe"}</LoadingButton>
                                   }
                                 </div>
                                 {alreadySubmit ? <div className='subscriber_msg'> <p className='text-success thanks_text'>Thanks for the interest, you are already in our subscriber list. We will keep you posted first on our updates</p> </div> : ""}

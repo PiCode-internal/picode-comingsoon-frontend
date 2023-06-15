@@ -57,20 +57,20 @@ margin-bottom: 20px;
 
 
 .email_input{
-font-family: 'Hind Siliguri', sans-serif;
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 23px;
-color: #171B21;
-border: 2px solid #171B21;
-border-radius: 4px;
-padding: 10px 15px;
-outline: none;
-max-width: 320px;
-width: 100%;
-margin-right: 15px;
-margin-top: 20px;
+  font-family: 'Hind Siliguri', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 23px;
+  color: #171B21;
+  border: 2px solid #171B21;
+  border-radius: 4px;
+  padding: 10px 15px;
+  outline: none;
+  max-width: 320px;
+  width: 100%;
+  margin-right: 15px;
+  margin-top: 20px;
 }
 
 .mainLogo{
@@ -87,7 +87,6 @@ margin-top: 20px;
   display: flex;
   align-items: baseline;
   flex-wrap:wrap
-
 }
 
 .email_div{
@@ -122,12 +121,41 @@ margin-top: 20px;
 }
 
 .email_btn{
-font-family:'Hind Siliguri', sans-serif;
-font-style: normal;
-font-weight: 500;
-font-size: 20px;
-line-height: 32px;
-text-transform: uppercase;
+  font-family:'Hind Siliguri', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  text-transform: uppercase;
+  color: #171B21;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+}
+
+.email_btn.MuiButtonBase-root {
+  font-family:'Hind Siliguri', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  text-transform: uppercase;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+}
+
+.email_btn.MuiButtonBase-root:hover{
+  background: transparent;
+  color: black;
+}
+
+.code_btn .MuiCircularProgress-loading {
+  color: black;
+}
+.code_btn.MuiLoadingButton-loading {
+  color: black !important;
 }
 
 .coming_img{
@@ -150,6 +178,7 @@ text-transform: uppercase;
   height: 420px;
   margin: 0 auto;
 }
+
 .main_img{
   position: relative;
   z-index: 5;
@@ -161,22 +190,22 @@ text-transform: uppercase;
   width: 470px;
   transform: translate(-113px, -19px); 
   animation: sky_blue-circle 15s linear infinite; 
-
 }
+
 .light_green{
   position: absolute;
   width: 440px;
   transform: translate(-51px , -11px);
   animation: light_green-circle 15s linear infinite; 
-
 }
+
 .pinnk{
   position: absolute;
   width: 450px;
   transform: translate(73px);
   animation: pinnk-circle 15s linear infinite; 
-
 }
+
 .yelllow{
   position: absolute;
   height: 450px;
