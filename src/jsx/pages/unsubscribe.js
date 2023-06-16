@@ -14,7 +14,11 @@ const Unsubscribe = () => {
       let payload = {
         email: emailID
       }
-      const { data } = await axios.post('https://picode-comingsoon-backend.vercel.app/api/email/unsubscribe', payload);
+      if (emailID) {
+        const { data } = await axios.post('https://picode-comingsoon-backend.vercel.app/api/email/unsubscribe', payload);
+      } else {
+        console.log()
+      }
     })()
   }, [])
 
