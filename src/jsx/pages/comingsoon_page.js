@@ -129,7 +129,7 @@ function ComingsoonPage() {
                                           </a>
                                         </p>
                                       </div>
-                                      : <LoadingButton loading={loading} type="submit" onclick={handleSubmit} className='btn email_btn' disabled={loading}>{"Subsccribe"}</LoadingButton>
+                                      : <LoadingButton loading={loading} type="submit" onclick={handleSubmit} className='btn email_btn' disabled={loading}>{"Subscribe"}</LoadingButton>
                                   }
                                 </div>
                                 {alreadySubmit ? <div className='subscriber_msg'> <p className='text-success thanks_text'>Thanks for the interest, you are already in our subscriber list. We will keep you posted first on our updates</p> </div> : ""}
